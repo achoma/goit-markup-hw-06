@@ -8,6 +8,7 @@
   --white: #ffffff;
   --green: #31d0aa;
   --navyblue-modal: #2e2f42;
+  --lightslate: #8e8f99;
   --tr-function: cubic-bezier(0.4, 0, 0.2, 1);
   --tr-duration: 250ms;
   --transition: var(--tr-function) var(--tr-duration);
@@ -139,8 +140,6 @@ body {
     box-shadow var(--transition);
 }
 
-/***********do weryfikacj *************/
-
 .navi-link a:hover,
 .navi-link a:focus {
   color: var(--ocean, #404bbf);
@@ -154,14 +153,6 @@ body {
   gap: 40px;
   padding-right: 40px;
 }
-
-/*.current {
-  display: flex;
-  width: 48px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}*/
 
 .current-link-portfolio {
   position: relative;
@@ -483,24 +474,26 @@ p {
   padding-bottom: 16px;
 }
 .mail-box {
+  padding-left: 16px;
+  color: var(--white);
+  outline: transparent;
   width: 264px;
-
   height: 40px;
   flex-shrink: 0;
-  background: none;
-  border-radius: 4px;
+  background-color: transparent;
   margin-right: 24px;
+  border-radius: 4px;
   border: 1px solid var(--white, #fff);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-
-  color: var(--white, #fff);
+}
+.mail-box::placeholder {
   font-family: Roboto;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 2;
   letter-spacing: 0.48px;
-  padding-left: 16px;
+  color: var(--white);
 }
 
 .button-sub {
@@ -513,6 +506,12 @@ p {
   border: none;
   color: var(--white);
   gap: 16px;
+}
+.button-sub:focus,
+.button-sub:hover {
+  border-radius: 4px;
+  background: var(--ocean, #404bbf);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .icon-sub {
   width: 24px;
@@ -677,4 +676,133 @@ p {
 
   transition: color var(--transition), background-color var(--transition),
     box-shadow var(--transition);
+}
+
+.form-modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 72px;
+  left: 24px;
+}
+.form-modal label {
+  display: inline-flex;
+}
+.modal-text {
+  width: 360px;
+  color: var(--navyblue, #2e2f42);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  padding-bottom: 16px;
+}
+
+.label-modal label {
+  display: flex;
+  flex-direction: column;
+  color: var(--lightslate, #8e8f99);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.48px;
+  gap: 4px;
+  padding-bottom: 8px;
+}
+
+.input-wrapper {
+  display: flex;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+}
+
+.input-wrapper:focus-within {
+  border: 1px solid var(--iris, #4d5ae5);
+  fill: var(--iris, #4d5ae5);
+}
+.input-wrapper > input {
+  flex-grow: 1;
+  padding-left: 4px;
+}
+
+.box-input:not([type="checkbox"]) {
+  border: none;
+  background-color: transparent;
+  outline: transparent;
+}
+textarea {
+  resize: none;
+}
+.label-comment {
+  padding-top: 8px;
+  padding-left: 16px;
+  width: 360px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+}
+.label-comment:focus-within {
+  padding-top: 8px;
+  padding-left: 16px;
+  flex-grow: 1;
+  outline: transparent;
+  border: 1px solid var(--iris, #4d5ae5);
+}
+.privacy {
+  color: var(--lightslate, #8e8f99);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.48px;
+  padding-bottom: 24px;
+  padding-top: 8px;
+}
+input[type="checkbox"] {
+  appearance: none;
+}
+input:checked + .checkbox-icon {
+  opacity: 1;
+}
+.checkbox-icon {
+  display: block;
+  position: relative;
+  border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+  color: #fff;
+}
+.privacy-text a {
+  color: var(--iris, #4d5ae5);
+  text-decoration-line: underline;
+}
+.button-modal {
+  width: 169px;
+  height: 56px;
+  border-radius: 4px;
+  padding: 16px 32px;
+  background: var(--iris, #4d5ae5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  color: var(--white, #fff);
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+}
+.button-sand {
+  padding-top: 16px;
+  display: inline-flex;
+  justify-content: center;
+}
+.button-modal:hover,
+.button-modal:focus {
+  border-radius: 4px;
+  background: var(--ocean, #404bbf);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }

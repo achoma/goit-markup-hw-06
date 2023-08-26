@@ -485,12 +485,14 @@
           </li>
           <li>
             <form class="form-box">
-              <label>
+              <label for="email">
                 <p class="form-sub">Subscribe</p>
                 <input
+                  id="email"
                   class="mail-box"
                   type="email"
                   placeholder="E-mail"
+                  name="email"
                   required
                 />
               </label>
@@ -505,13 +507,97 @@
         </ul>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="button-close" data-modal-close>
           <svg width="8px" height="8px">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
+        <form class="form-modal label-modal">
+          <p class="modal-text">
+            Leave your contacts and we will call you back
+          </p>
+          <label for="name"
+            >Name
+            <div class="input-wrapper">
+              <svg width="18px" height="24px">
+                <use href="./images/icons.svg#icon-person-black-18dp-1" />
+              </svg>
+
+              <input
+                class="box-input"
+                id="name"
+                type="text"
+                name="name"
+                required
+              />
+            </div>
+          </label>
+          <label for="phone"
+            >Phone
+            <div class="input-wrapper">
+              <svg width="18px" height="24px">
+                <use href="./images/icons.svg#icon-phone-black-18dp-1" />
+              </svg>
+
+              <input
+                class="box-input"
+                id="phone"
+                type="number"
+                name="phone"
+                required
+              />
+            </div>
+          </label>
+          <label for="email"
+            >Email
+            <div class="input-wrapper">
+              <svg width="18px" height="24px">
+                <use href="./images/icons.svg#icon-email-black-18dp-1" />
+              </svg>
+
+              <input
+                class="box-input"
+                id="email"
+                type="email"
+                name="email"
+                required
+              />
+            </div>
+          </label>
+          <label
+            >Comment<textarea
+              class="label-comment"
+              type="text"
+              name="comment"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+
+          <label for="accept" class="privacy">
+            <div>
+              <input
+                class="checkbox-icon"
+                type="checkbox"
+                name="accept"
+                id="accept"
+                required
+              /><span>
+                <svg width="16px" height="16px">
+                  <use href="./images/icons.svg#icon-Property-1click" />
+                </svg>
+              </span>
+
+              I accept the terms and conditions of the
+              <a href="#">Privacy Policy</a>
+            </div>
+          </label>
+
+          <div class="button-sand">
+            <button class="button-modal" type="submit">Send</button>
+          </div>
+        </form>
       </div>
     </div>
 
